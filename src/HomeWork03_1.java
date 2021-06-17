@@ -16,6 +16,7 @@ package Lesson03;
  *
  * Если выполнение задач вызывает трудности, можете обратиться к последней странице методического пособия. Для задач со * не нужно искать решение в интернете, иначе нет смысла их выполнять.
  */
+
 public class HomeWork03_1 {
     public static void main(String[] args) {
 // задание 1
@@ -46,12 +47,38 @@ public class HomeWork03_1 {
         printArray_i( " После умножения: ", arr_3);
         System.out.println();
 
-     }
 
-    public static void printArray_i(String s, int[] inArr){ // вывести одномерный массив
+// задание 4
+        System.out.println("4 задание:");
+        int a = 10;
+        int [][] arr_4 = new int[a][a];
+        fill4(arr_4);
+        printArray_iy( "4.Заполнить диагональ в цикле: ", arr_4);
+        System.out.println("+++++++++++++++");
+
+
+// задание 5
+        System.out.println("5 задание: Одномерный массив ");
+        int [] zadanie_5 = zadanie5(5,10);
+        printArray_i( " " , zadanie_5);
+        System.out.println();
+
+    }
+
+    public static void printArray_i(String s, int[] inArr) { // вывести одномерный массив
+        System.out.print(s);
         System.out.print(s);
         for (int i = 0; i < inArr.length; i++) {
             System.out.print(inArr[i] + " ");
+        }
+    }
+
+    public static void printArray_iy(String s, int[][] inArr){ // вывести двумерный массив
+        for (int i = 0; i < inArr.length; i++) {
+            for (int y = 0; y < inArr.length; y++) {
+                System.out.print(inArr[i][y] + " ");
+            }
+            System.out.println();
         }
     }
     public static void zamena(int[] arr) {
@@ -76,7 +103,18 @@ public class HomeWork03_1 {
         }
 
     }
+    public static void fill4(int[][] arr_4) {
+        for (int i = 0; i < arr_4.length; i++) {
+            arr_4[i][i] = 1;
+            arr_4[i][arr_4.length - 1 - i] = 1;
+        }
+    }
 
+    public static int[] zadanie5(int len, int initialValue) {
+        int[] arr_5 = new int [len];
+        for (int i = 0; i < arr_5.length; i++){
+            arr_5[i] = initialValue;
+        }
+        return arr_5;
+    }
 }
-
-
