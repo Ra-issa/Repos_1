@@ -63,7 +63,15 @@ public class HomeWork03_1 {
         printArray_i( " " , zadanie_5);
         System.out.println();
 
-    }
+// задание 6
+        System.out.println("6 задание: min и max ");
+
+        int[] arr_6 = {12, 5, 3, 2, 117, 4, 5, 2, 4, 8, 9, 1};
+        printArray_i( " " , arr_6);
+        System.out.println();
+        System.out.println( "Максимум: " + zadanie6_max(arr_6));
+        System.out.println( "Минимум: " + zadanie6_min(arr_6));
+            }
 
     public static void printArray_i(String s, int[] inArr) { // вывести одномерный массив
         System.out.print(s);
@@ -117,4 +125,23 @@ public class HomeWork03_1 {
         }
         return arr_5;
     }
+    public static int zadanie6_min(int[] arr_6) {
+        int min = arr_6[0];
+        for (int i = 0; i < arr_6.length; i++) {
+            if (arr_6[i] < min) {
+                min = arr_6[i];  // присвоить минимальному значению значение из массива, если оно меньше...
+            }
+        }
+            return min;
+        }
+        public static int zadanie6_max(int[] arr_6) {
+            int max = arr_6[0];
+            for (int i = 0; i < arr_6.length; i++) {
+                if (arr_6[i] > max) {
+                    max = arr_6[i];  // присвоить максимальному значению значение из массива, если оно больше...
+                }
+            }
+                return max;
+
+        }
 }
